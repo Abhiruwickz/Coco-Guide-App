@@ -1,12 +1,6 @@
 fastapi
-uvicorn[standard]
-pydantic
+uvicorn
 pandas
 faiss-cpu
 sentence-transformers
-transformers
-peft
-accelerate
-bitsandbytes
-torch
 requests

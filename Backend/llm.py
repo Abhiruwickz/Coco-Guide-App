@@ -1,7 +1,7 @@
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "qwen2.5:3b"
+MODEL_NAME = "qwen2.5:1.5b"
 
 def qwen_rewrite_only(user_question: str, grounded_answer: str, lang: str) -> str:
     """
@@ -33,7 +33,6 @@ Now rewrite the Grounded Answer in a conversational way (same meaning, same fact
         "model": MODEL_NAME,
         "prompt": prompt,
         "stream": False,
-        # If your Ollama supports options, these help reduce hallucinations:
         "options": {
             "temperature": 0.2,
             "top_p": 0.8
